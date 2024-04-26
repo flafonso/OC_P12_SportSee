@@ -1,0 +1,37 @@
+@import "../variables";
+
+.nutriment {
+  padding: 30px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border-radius: 5px;
+  background-color: #FBFBFB;
+  &__icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 6px;
+  }
+  &__infos {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    & > p {
+      margin: 0;
+    }
+  }
+}
+
+.nutriment-value {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nutriment-name {
+  color: $--second-color-text;
+  font-size: 14px;
+  font-weight: 500;
+}

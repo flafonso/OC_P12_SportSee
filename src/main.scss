@@ -2,5 +2,7 @@
 @import "./sassStyles/variables";
 @import "./sassStyles/mixin";
 @import "./sassStyles/typography.scss";
-@import "./sassStyles/components/horizontal-navbar.scss";
-@import "./sassStyles/components/vertical-navbar.scss";
+@import "./sassStyles/components/header.scss";
+@import "./sassStyles/pages/dashboard.scss";
+@import "./sassStyles/components/sidebar.scss";
+@import "./sassStyles/components/sport-btn.scss";

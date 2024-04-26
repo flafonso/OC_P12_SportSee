@@ -5,22 +5,27 @@ import {
   RouterProvider,
   Outlet
 } from "react-router-dom";
-import VerticalNavbar from './components/VerticalNavbar';
-import HorizontalNavbar from './components/HorizontalNavbar';
 import './main.scss'
+import Dashboard from './pages/Dashboard';
+import Header from './components/Header';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
+    children: [
+      {
+        path: "",
+        element: <Dashboard />
+      }
+    ]
   }
 ]);
 
 function Root() {
   return (
     <>
-      <HorizontalNavbar />
-      <VerticalNavbar />
+      <Header />
       <Outlet />
     </>
     );

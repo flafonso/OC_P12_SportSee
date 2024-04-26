@@ -2,11 +2,11 @@
 import Logo from "../assets/Logo"
 import { NavLink } from "react-router-dom";
 
-function HorizontalNavbar() {
+function Header() {
   return (
-    <div className="horizontal-navbar">
+    <div className="header">
       <Logo />
-      <nav className="navbar-top">
+      <nav className="header__navbar">
         <NavLink to="/">Accueil</NavLink>
         <NavLink to="/">Profil</NavLink>
         <NavLink to="/">Réglage</NavLink>
@@ -16,4 +16,4 @@ function HorizontalNavbar() {
   );
 }
 
-export default HorizontalNavbar;
+export default Header;

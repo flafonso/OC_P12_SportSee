@@ -4,11 +4,13 @@ import ChickenIcon from "../assets/ChickenIcon.js";
 import EnergyIcon from "../assets/EnergyIcon.js";
 import NutrimentInfo from "../components/NutrimentInfo.js";
 import Sidebar from "../components/Sidebar";
+import DailyActivityChart from "../components/graphs/DailyActivityChart.js";
 
 import { USER_MAIN_DATA } from "../mockedData.js";
+import { USER_ACTIVITY } from "../mockedData.js";
 
 function Dashboard() {
-  console.log(USER_MAIN_DATA);
+  console.log(USER_ACTIVITY[0].sessions);
   return (
     <div className="dashboard">
       <Sidebar />
@@ -20,13 +22,15 @@ function Dashboard() {
           </span>
         </h1>
         <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
+
         <div className="user-infos">
           <div className="user-infos__graphs">
-            <p>un graph</p>
+            <DailyActivityChart data={USER_ACTIVITY[0].sessions} />
             <div className="les-trois-graphs">
               <p>les trois autres</p>
             </div>
           </div>
+
           <div className="user-infos__nutrition">
             <NutrimentInfo
               typeName="Calories"

@@ -1,0 +1,30 @@
+@import "../variables";
+
+
+.daily-activity-chart {
+  position: relative;
+  background-color: #FBFBFB;
+  border: solid 1px blueviolet;
+  & h3 {
+    position: absolute;
+    color: $--main-color-text;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0;
+    top: 23px;
+    left: 23px;
+  }
+  & .recharts-default-legend {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+  }
+  & .recharts-surface {
+    margin-right: 10px !important;
+  }
+  & .recharts-legend-item-text {
+    font-size: 14px;
+    font-weight: 500;
+    color: $--second-color-text !important;
+  }
+}

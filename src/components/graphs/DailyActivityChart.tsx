@@ -9,6 +9,7 @@ import {
   TooltipProps,
 } from "recharts";
 // import { ValueType, NameType } from "recharts/types/component/DefaultTooltipContent";
+// Com for test
 
 function DailyActivityChart({ data }: { data: any }) {
   console.log(data);

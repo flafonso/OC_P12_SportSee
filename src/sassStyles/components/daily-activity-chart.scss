@@ -27,4 +27,15 @@
     font-weight: 500;
     color: $--second-color-text !important;
   }
+  & .custom-tooltip {
+    padding: 4px 7px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 7px;
+    font-size: 7px;
+    font-weight: 500;
+    color: white;
+    background-color: #E60000;
+  }
 }

@@ -8,8 +8,6 @@ import {
   CartesianGrid,
   TooltipProps,
 } from "recharts";
-// import { ValueType, NameType } from "recharts/types/component/DefaultTooltipContent";
-// Com for test
 
 function DailyActivityChart({ data }: { data: any }) {
   console.log(data);
@@ -26,6 +24,11 @@ function DailyActivityChart({ data }: { data: any }) {
     );
   };
 
+  const foramtXAxis = (tick: string) => {
+    const date = new Date(tick);
+    return date.getDate().toString();
+  };
+
   return (
     <div className="daily-activity-chart">
       <h3>Activité quotidienne</h3>
@@ -36,11 +39,10 @@ function DailyActivityChart({ data }: { data: any }) {
         data={data}
         barSize={7}
         barGap={8}
-        barCategoryGap={40}
-        margin={{ top: 23, right: 0, left: 23, bottom: 23 }}
+        margin={{ top: 23, right: 30, left: 23, bottom: 28 }}
       >
         <CartesianGrid strokeDasharray="3 3" vertical={false} />
-        <XAxis dataKey="day" />
+        <XAxis dataKey="day" tickLine={false} tickFormatter={foramtXAxis} domain={["dataMin", "dataMax"]} tickMargin={16} />
         <YAxis
           yAxisId="left"
           orientation="left"
@@ -52,7 +54,10 @@ function DailyActivityChart({ data }: { data: any }) {
           orientation="right"
           dataKey="kilogram"
           axisLine={false}
-          domain={[75, 82]}
+          tickLine={false}
+          type="number"
+          domain={["dataMin - 2", "dataMax + 1"]}
+          tickMargin={30}
         />
         <Tooltip content={renderTooltip} />
         <Legend

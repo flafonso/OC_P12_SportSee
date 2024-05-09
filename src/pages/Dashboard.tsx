@@ -6,8 +6,14 @@ import NutrimentInfo from "../components/NutrimentInfo.js";
 import Sidebar from "../components/Sidebar";
 import DailyActivityChart from "../components/graphs/DailyActivityChart.js";
 import PerformanceByActivityChart from "../components/graphs/PerformanceByActivityChart.tsx";
+import AverageSessionChart from "../components/graphs/AverageSessionChart.js";
 
-import { USER_MAIN_DATA, USER_ACTIVITY, USER_PERFORMANCE} from "../mockedData.js";
+import {
+  USER_MAIN_DATA,
+  USER_ACTIVITY,
+  USER_AVERAGE_SESSIONS,
+  USER_PERFORMANCE
+} from "../mockedData.js";
 
 function Dashboard() {
   console.log(USER_ACTIVITY[0].sessions);
@@ -28,6 +34,7 @@ function Dashboard() {
             <DailyActivityChart data={USER_ACTIVITY[0].sessions} />
             <div className="les-trois-graphs">
               <PerformanceByActivityChart performanceData={USER_PERFORMANCE[0]} />
+              <AverageSessionChart data={USER_AVERAGE_SESSIONS[0].sessions} />
             </div>
           </div>
 

@@ -1,4 +1,12 @@
-import { LineChart, XAxis, YAxis, Tooltip, Line, TooltipProps } from "recharts";
+import {
+  LineChart,
+  XAxis,
+  YAxis,
+  Tooltip,
+  Line,
+  TooltipProps,
+  DotProps,
+} from "recharts";
 import {
   ValueType,
   NameType,
@@ -17,6 +25,24 @@ function AverageSessionChart({ data }: { data: any }) {
       <div className="custom-tooltip">
         <p>{`${payload[0].value} min`}</p>
       </div>
+    );
+  };
+
+  const renderActiveDot = (props: DotProps) => {
+    const { cx, cy } = props;
+    console.log(props);
+    return (
+      <svg>
+        <circle
+          cx={cx}
+          cy={cy}
+          r={4}
+          fill="#FFFFFF"
+          stroke-width="9"
+          stroke="white"
+          stroke-opacity="0.198345"
+        />
+      </svg>
     );
   };
 
@@ -61,6 +87,7 @@ function AverageSessionChart({ data }: { data: any }) {
           type="monotone"
           dataKey="sessionLength"
           dot={false}
+          activeDot={renderActiveDot}
           stroke="url(#gradientLine)"
           strokeWidth={2}
         />

@@ -1,6 +1,32 @@
 @import "../variables";
 
 .average-session-chart {
+  position: relative;
   width: 258px;
   height: 263px;
+  border-radius: 5px;
+  background-color: #FF0000;
+  & h3 {
+    margin: 0;
+    position: absolute;
+    top: 29px;
+    left: 34px;
+    max-width: 147px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 15px;
+    font-weight: 500;
+  }
+  & .recharts-cartesian-axis-tick-value {
+    font-size: 12px;
+    font-weight: 500;
+    fill: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.5);
+  }
+  & .custom-tooltip {
+    padding: 1px 7px;
+    font-size: 8px;
+    font-weight: 500;
+    color: black;
+    background-color: #FFFFFF;
+  }
 }

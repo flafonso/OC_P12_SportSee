@@ -1,12 +1,10 @@
 //comment
 import {
   RadarChart,
-  XAxis,
-  YAxis,
-  Tooltip,
-  Line,
-  TooltipProps,
-  DotProps,
+  PolarGrid,
+  PolarAngleAxis,
+  PolarRadiusAxis,
+  Radar
 } from "recharts";
 // import {
 //   ValueType,
@@ -21,7 +19,11 @@ function PerformanceByActivityChart({ performanceData }: { performanceData: any 
 
   return (
     <div className="performance-by-activity">
-      {/* <RadarChart width={258} height={263} data={data}></RadarChart> */}
+      <RadarChart width={258} height={263} data={data}>
+        <PolarGrid polarRadius={[12.2, 25, 50, 75, 100]} radialLines={false} stroke="#FFFFFF"/>
+        <PolarAngleAxis dataKey="kind"/>
+        <Radar dataKey="value" fill="#FF0101" fillOpacity={0.7}/>
+      </RadarChart>
     </div>
   );
 }

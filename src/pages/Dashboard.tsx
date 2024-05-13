@@ -5,7 +5,7 @@ import EnergyIcon from "../assets/EnergyIcon.js";
 import NutrimentInfo from "../components/NutrimentInfo.js";
 import Sidebar from "../components/Sidebar";
 import DailyActivityChart from "../components/graphs/DailyActivityChart.js";
-import ActivityTypeChart from "../components/graphs/ActivityTypeChart.js";
+import PerformanceByActivityChart from "../components/graphs/PerformanceByActivityChart.tsx";
 
 import { USER_MAIN_DATA, USER_ACTIVITY, USER_PERFORMANCE} from "../mockedData.js";
 
@@ -27,7 +27,7 @@ function Dashboard() {
           <div className="user-infos__graphs">
             <DailyActivityChart data={USER_ACTIVITY[0].sessions} />
             <div className="les-trois-graphs">
-              <ActivityTypeChart performanceData={USER_PERFORMANCE[0]} />
+              <PerformanceByActivityChart performanceData={USER_PERFORMANCE[0]} />
             </div>
           </div>
 

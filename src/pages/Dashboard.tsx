@@ -34,9 +34,9 @@ function Dashboard() {
         <div className="user-infos">
           <div className="user-infos__graphs">
             <DailyActivityChart data={USER_ACTIVITY[0].sessions} />
-            <div className="les-trois-graphs">
-              <PerformanceByActivityChart performanceData={USER_PERFORMANCE[0]} />
+            <div className="activity-details">
               <AverageSessionChart data={USER_AVERAGE_SESSIONS[0].sessions} />
+              <PerformanceByActivityChart performanceData={USER_PERFORMANCE[0]} />
             </div>
           </div>
 

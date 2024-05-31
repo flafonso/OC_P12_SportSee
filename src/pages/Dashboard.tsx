@@ -14,6 +14,7 @@ import {
   USER_AVERAGE_SESSIONS,
   USER_PERFORMANCE
 } from "../mockedData.js";
+import ScoreChart from "../components/graphs/ScoreChart.tsx";
 
 //comment test
 
@@ -37,6 +38,7 @@ function Dashboard() {
             <div className="activity-details">
               <AverageSessionChart data={USER_AVERAGE_SESSIONS[0].sessions} />
               <PerformanceByActivityChart performanceData={USER_PERFORMANCE[0]} />
+              <ScoreChart data={USER_MAIN_DATA[0]} />
             </div>
           </div>
 

@@ -1,6 +1,32 @@
+@import "../variables.scss";
+
 .score-chart {
+  position: relative;
   width: 258px;
   height: 263px;
   background-color: #FBFBFB;
   border-radius: 5px;
+  & h3, p {
+    margin: 0;
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    color: $--main-color-text;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  & p {
+    width: 70px;
+    height: 70px;
+    top: calc(50% - 35px);
+    left: calc(50% - 35px);
+    text-align: center;
+    color: $--second-color-text;
+    font-size: 16px;
+  }
+  & .score {
+    color: #282D30;
+    font-size: 26px;
+    font-weight: bold;
+  }
 }

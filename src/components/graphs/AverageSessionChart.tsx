@@ -38,9 +38,9 @@ function AverageSessionChart({ data }: { data: any }) {
           cy={cy}
           r={4}
           fill="#FFFFFF"
-          stroke-width="9"
+          strokeWidth="9"
           stroke="white"
-          stroke-opacity="0.198345"
+          strokeOpacity="0.198345"
         />
       </svg>
     );

@@ -2,8 +2,8 @@
 
 .average-session-chart {
   position: relative;
-  width: 258px;
-  height: 263px;
+  width: clamp(183px, 17.91vw, 258px);
+  height: clamp(186px, 18.26vw, 263px);
   border-radius: 5px;
   background-color: #FF0000;
   & h3 {

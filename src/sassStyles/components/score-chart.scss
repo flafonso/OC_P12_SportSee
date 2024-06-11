@@ -2,8 +2,8 @@
 
 .score-chart {
   position: relative;
-  width: 258px;
-  height: 263px;
+  width: clamp(183px, 17.91vw, 258px);
+  height: clamp(186px, 18.26vw, 263px);
   background-color: #FBFBFB;
   border-radius: 5px;
   & h3, p {

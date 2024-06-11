@@ -6,6 +6,7 @@ import {
   Line,
   TooltipProps,
   DotProps,
+  ResponsiveContainer,
 } from "recharts";
 import {
   ValueType,
@@ -63,36 +64,36 @@ function AverageSessionChart({ data }: { data: any }) {
   return (
     <div className="average-session-chart">
       <h3>Durée moyenne des sessions</h3>
-      <LineChart
-        width={258}
-        height={263}
-        data={data}
-        margin={{ top: 77, bottom: 10 }}
-      >
-        <XAxis
-          dataKey="day"
-          tickLine={false}
-          tickFormatter={foramtXAxis}
-          axisLine={false}
-          padding={{ left: 14, right: 14 }}
-        />
-        <YAxis dataKey="sessionLength" hide={true} domain={[-4, "dataMax"]} />
-        <defs>
-          <linearGradient id="gradientLine">
-            <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.4} />
-            <stop offset="100%" stopColor="#FFFFFF" stopOpacity={0.88} />
-          </linearGradient>
-        </defs>
-        <Line
-          type="monotone"
-          dataKey="sessionLength"
-          dot={false}
-          activeDot={renderActiveDot}
-          stroke="url(#gradientLine)"
-          strokeWidth={2}
-        />
-        <Tooltip content={renderTooltip} />
-      </LineChart>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart
+          data={data}
+          margin={{ top: 77, bottom: 10 }}
+        >
+          <XAxis
+            dataKey="day"
+            tickLine={false}
+            tickFormatter={foramtXAxis}
+            axisLine={false}
+            padding={{ left: 14, right: 14 }}
+          />
+          <YAxis dataKey="sessionLength" hide={true} domain={[-4, "dataMax"]} />
+          <defs>
+            <linearGradient id="gradientLine">
+              <stop offset="0%" stopColor="#FFFFFF" stopOpacity={0.4} />
+              <stop offset="100%" stopColor="#FFFFFF" stopOpacity={0.88} />
+            </linearGradient>
+          </defs>
+          <Line
+            type="monotone"
+            dataKey="sessionLength"
+            dot={false}
+            activeDot={renderActiveDot}
+            stroke="url(#gradientLine)"
+            strokeWidth={2}
+          />
+          <Tooltip content={renderTooltip} />
+        </LineChart>
+      </ResponsiveContainer>
     </div>
   );
 }

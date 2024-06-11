@@ -2,6 +2,8 @@
 
 
 .daily-activity-chart {
+  width: clamp(593px, 57.98vw, 835px);
+  height: clamp(227px, 22.2vw, 320px);
   position: relative;
   background-color: #FBFBFB;
   & h3 {

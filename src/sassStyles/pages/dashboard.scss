@@ -12,7 +12,7 @@
     & h1 {
       margin: 0px;
       margin-bottom: 23px;
-      font-size: 48px;
+      font-size: clamp(40px, 3.3vw, 48px);
       font-weight: 500;
     }
   }
@@ -24,7 +24,7 @@
 
 .user-infos {
   border: solid 2px red;
-  margin-top: 60px;
+  margin-top: clamp(20px, 4.16vw, 60px);
   display: flex;
   gap: clamp(5px, 2.08vw, 30px);
   width: 100%;

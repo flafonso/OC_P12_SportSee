@@ -16,17 +16,19 @@
     font-weight: 500;
   }
   & p {
-    width: 70px;
-    height: 70px;
-    top: calc(50% - 35px);
-    left: calc(50% - 35px);
+    width: 4.86vw;
+    height: 4.86vw;
+    top: calc(50% - 2.43vw);
+    left: calc(50% - 2.43vw);
     text-align: center;
     color: $--second-color-text;
-    font-size: 16px;
+    font-size: 1.11vw;
+    // font-size: 16px;
   }
   & .score {
     color: #282D30;
-    font-size: 26px;
+    font-size: 1.8vw;
+    // font-size: 26px;
     font-weight: bold;
   }
 }

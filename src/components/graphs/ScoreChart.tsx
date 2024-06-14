@@ -9,17 +9,16 @@ function ScoreChart({ data }: { data: any }) {
   const scoreData = [
     {
       name: "Score",
-      value: data.todayScore ? data.todayScore : data.score,
+      value: data.score,
       fill: "#FF0000",
     },
   ];
-  console.log(`score : ${scoreData[0].value}`);
 
   return (
     <div className="score-chart">
       <h3>Score</h3>
       <p>
-        <span className="score">{scoreData[0].value * 100}%</span> de votre
+        <span className="score">{data.score * 100}%</span> de votre
         objectif
       </p>
       <ResponsiveContainer width="100%" height="100%">

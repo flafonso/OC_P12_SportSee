@@ -14,7 +14,7 @@ import {
 } from "recharts/types/component/DefaultTooltipContent";
 
 function AverageSessionChart({ data }: { data: any }) {
-  console.log(data);
+  // console.log(data);
   const renderTooltip = ({
     active,
     payload,
@@ -31,7 +31,7 @@ function AverageSessionChart({ data }: { data: any }) {
 
   const renderActiveDot = (props: DotProps) => {
     const { cx, cy } = props;
-    console.log(props);
+    // console.log(props);
     return (
       <svg>
         <circle

@@ -11,7 +11,7 @@ import {
 } from "recharts";
 
 function DailyActivityChart({ data }: { data: any }) {
-  console.log(data);
+  // console.log(data);
 
   const renderTooltip = ({ active, payload }: TooltipProps<number, string>) => {
     if (!(active && payload && payload.length === 2)) {

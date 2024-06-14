@@ -16,6 +16,7 @@ import {
 } from "../dataNormalizer.ts";
 
 import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import {
   fetchUserData,
   fetchUserActivity,
@@ -30,7 +31,8 @@ function Dashboard() {
     useState<UserAverageSessions | null>(null);
   const [userPerformance, setUserPerformance] =
     useState<UserPerformance | null>(null);
-  const userId = 12;
+  const { id } = useParams();
+  const userId = Number(id)
 
   useEffect(() => {
     async function fetchData() {

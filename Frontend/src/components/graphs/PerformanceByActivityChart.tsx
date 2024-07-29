@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from "react";
 import {
   RadarChart,
   PolarGrid,
@@ -7,7 +7,11 @@ import {
   ResponsiveContainer,
 } from "recharts";
 
-function PerformanceByActivityChart({ performanceData }: { performanceData: any }) {
+function PerformanceByActivityChart({
+  performanceData,
+}: {
+  performanceData: any;
+}) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [containerWidth, setcontainerWidth] = useState(0);
 
@@ -20,34 +24,30 @@ function PerformanceByActivityChart({ performanceData }: { performanceData: any 
 
     updateWidth();
     function cleanup() {
-      window.removeEventListener('resize', updateWidth);
+      window.removeEventListener("resize", updateWidth);
     }
-    window.addEventListener('resize', updateWidth);
+    window.addEventListener("resize", updateWidth);
     return cleanup;
   }, []);
 
   const maxRadius = 0.3488 * containerWidth;
-  // console.log(containerWidth);
-  // console.log(maxRadius);
   const polarRadius = [
     maxRadius * 0.125,
     maxRadius * 0.25,
     maxRadius * 0.5,
     maxRadius * 0.75,
-    maxRadius
+    maxRadius,
   ];
 
   const dynamicFont = () => {
     if (containerWidth > 245) {
       return 12;
-    }
-    else if (containerWidth > 232){
+    } else if (containerWidth > 232) {
       return 11;
-    }
-    else {
+    } else {
       return 9;
     }
-  }
+  };
 
   const { kind, data } = performanceData;
   let reversedData = [];
@@ -75,10 +75,7 @@ function PerformanceByActivityChart({ performanceData }: { performanceData: any 
   return (
     <div ref={containerRef} className="performance-by-activity">
       <ResponsiveContainer width="100%" height="100%">
-        <RadarChart
-          outerRadius={maxRadius}
-          data={reversedData}
-        >
+        <RadarChart outerRadius={maxRadius} data={reversedData}>
           <PolarGrid
             polarRadius={polarRadius}
             radialLines={false}

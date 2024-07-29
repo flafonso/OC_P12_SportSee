@@ -42,7 +42,6 @@ export interface UserPerformance {
 }
 
 function normalizeUserData({ data }: any): UserData {
-  // console.log(data);
   return {
     id: data.id,
     userInfos: data.userInfos,

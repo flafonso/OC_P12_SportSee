@@ -11,8 +11,6 @@ import {
 } from "recharts";
 
 function DailyActivityChart({ data }: { data: any }) {
-  // console.log(data);
-
   const renderTooltip = ({ active, payload }: TooltipProps<number, string>) => {
     if (!(active && payload && payload.length === 2)) {
       return null;
@@ -33,10 +31,7 @@ function DailyActivityChart({ data }: { data: any }) {
   return (
     <div className="daily-activity-chart">
       <h3>Activité quotidienne</h3>
-      <ResponsiveContainer
-        width="100%"
-        height="100%"
-      >
+      <ResponsiveContainer width="100%" height="100%">
         <BarChart
           data={data}
           barSize={7}

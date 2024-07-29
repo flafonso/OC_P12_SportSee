@@ -49,7 +49,7 @@ function Dashboard() {
         setUserAverageSessions(averageSessions);
         setUserPerformance(performance);
       } catch (error) {
-        console.error("Failed to fetch data:", error);
+        throw new Error("Failed to fetch data:");
       }
     }
     fetchData();
@@ -58,10 +58,6 @@ function Dashboard() {
   if (!userData || !userActivity || !userAverageSessions || !userPerformance) {
     return <div>Loading...</div>;
   }
-  // console.log(userData);
-  // console.log(userActivity);
-  // console.log(userAverageSessions);
-  // console.log(userPerformance);
 
   return (
     <div className="dashboard">

@@ -14,7 +14,6 @@ import {
 } from "recharts/types/component/DefaultTooltipContent";
 
 function AverageSessionChart({ data }: { data: any }) {
-  // console.log(data);
   const renderTooltip = ({
     active,
     payload,
@@ -31,7 +30,6 @@ function AverageSessionChart({ data }: { data: any }) {
 
   const renderActiveDot = (props: DotProps) => {
     const { cx, cy } = props;
-    // console.log(props);
     return (
       <svg>
         <circle
@@ -65,10 +63,7 @@ function AverageSessionChart({ data }: { data: any }) {
     <div className="average-session-chart">
       <h3>Durée moyenne des sessions</h3>
       <ResponsiveContainer width="100%" height="100%">
-        <LineChart
-          data={data}
-          margin={{ top: 77, bottom: 10 }}
-        >
+        <LineChart data={data} margin={{ top: 77, bottom: 10 }}>
           <XAxis
             dataKey="day"
             tickLine={false}

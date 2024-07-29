@@ -1,0 +1,33 @@
+@import "../variables.scss";
+
+.score-chart {
+  position: relative;
+  width: clamp(183px, min(17.91vw, 25.19vh), 258px);
+  height: clamp(186px, min(18.26vw, 25.68vh), 263px);
+  background-color: #fbfbfb;
+  border-radius: 5px;
+  & h3,
+  p {
+    margin: 0;
+    position: absolute;
+    top: 24px;
+    left: 30px;
+    color: $--main-color-text;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  & p {
+    width: min(4.86vw, 6.8vh);
+    height: min(4.86vw, 6.8vh);
+    top: calc(50% - min(2.43vw, 3.4vh));
+    left: calc(50% - min(2.43vw, 3.4vh));
+    text-align: center;
+    color: $--second-color-text;
+    font-size: min(1.11vw, 1.56vh);
+  }
+  & .score {
+    color: #282d30;
+    font-size: min(1.8vw, 2.5vh);
+    font-weight: bold;
+  }
+}

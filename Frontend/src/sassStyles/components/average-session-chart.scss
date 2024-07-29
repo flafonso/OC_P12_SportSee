@@ -2,10 +2,10 @@
 
 .average-session-chart {
   position: relative;
-  width: clamp(183px, 17.91vw, 258px);
-  height: clamp(186px, 18.26vw, 263px);
+  width: clamp(183px, min(17.91vw, 25.19vh), 258px);
+  height: clamp(186px, min(18.26vw, 25.68vh), 263px);
   border-radius: 5px;
-  background-color: #FF0000;
+  background-color: #ff0000;
   & h3 {
     margin: 0;
     position: absolute;
@@ -27,6 +27,6 @@
     font-size: 8px;
     font-weight: 500;
     color: black;
-    background-color: #FFFFFF;
+    background-color: #ffffff;
   }
 }

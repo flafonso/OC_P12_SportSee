@@ -16,7 +16,7 @@
     color: white;
   }
   & p {
-    font-size: clamp(10px, 0.83vw, 12px);
+    font-size: clamp(10px, min(0.83vw, 1.17vh), 12px);
     position: absolute;
     bottom: 60px;
     writing-mode: vertical-lr;

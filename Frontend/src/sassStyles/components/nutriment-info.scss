@@ -1,18 +1,18 @@
 @import "../variables";
 
 .nutriment {
-  padding: clamp(5px, 2.1vw, 30px);
+  padding: clamp(5px, min(2.1vw, 2.92vh), 30px);
   display: flex;
   align-items: center;
-  gap: clamp(8px, 1.6vw, 24px);
+  gap: clamp(8px, min(1.6vw, 2.34vh), 24px);
   border-radius: 5px;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   &__icon {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: clamp(40px, 4.16vw, 60px);
-    height: clamp(40px, 4.16vw, 60px);
+    width: clamp(40px, min(4.16vw, 5.85vh), 60px);
+    height: clamp(40px, min(4.16vw, 5.85vh), 60px);
     border-radius: 6px;
   }
   &__infos {
@@ -26,12 +26,12 @@
 }
 
 .nutriment-value {
-  font-size: clamp(16px, 1.38vw, 20px);
+  font-size: clamp(16px, min(1.38vw, 1.95vh), 20px);
   font-weight: bold;
 }
 
 .nutriment-name {
   color: $--second-color-text;
-  font-size: clamp(12px, 0.97vw, 14px);
+  font-size: clamp(12px, min(0.97vw, 1.36vh), 14px);
   font-weight: 500;
 }

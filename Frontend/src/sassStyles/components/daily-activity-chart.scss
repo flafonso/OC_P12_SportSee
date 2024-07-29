@@ -1,11 +1,10 @@
 @import "../variables";
 
-
 .daily-activity-chart {
-  width: clamp(593px, 57.98vw, 835px);
-  height: clamp(227px, 22.2vw, 320px);
+  width: clamp(593px, min(57.98vw, 81.54vh), 835px);
+  height: clamp(227px, min(22.2vw, 31.25vh), 320px);
   position: relative;
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
   & h3 {
     position: absolute;
     color: $--main-color-text;
@@ -37,12 +36,12 @@
     font-size: 7px;
     font-weight: 500;
     color: white;
-    background-color: #E60000;
+    background-color: #e60000;
   }
   & .recharts-cartesian-axis-tick-value {
     font-size: 14px;
     font-weight: 500;
-    fill: #9B9EAC;
-    color: #9B9EAC;
+    fill: #9b9eac;
+    color: #9b9eac;
   }
 }

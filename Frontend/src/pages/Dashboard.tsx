@@ -31,6 +31,7 @@ function Dashboard() {
     useState<UserAverageSessions | null>(null);
   const [userPerformance, setUserPerformance] =
     useState<UserPerformance | null>(null);
+    const [errorMessage, setErrorMessage] = useState<string | null>(null);
   const { id } = useParams();
   const userId = Number(id)
 
@@ -49,11 +50,20 @@ function Dashboard() {
         setUserAverageSessions(averageSessions);
         setUserPerformance(performance);
       } catch (error) {
-        throw new Error("Failed to fetch data:");
+        setErrorMessage(error instanceof Error ? error.message : "Unknow Error");
+        console.error(error);
       }
     }
     fetchData();
   }, [userId]);
+
+  if (errorMessage) {
+    return (
+      <div>
+        <h1>{errorMessage}</h1>
+      </div>
+    );
+  }
 
   if (!userData || !userActivity || !userAverageSessions || !userPerformance) {
     return <div>Loading...</div>;
